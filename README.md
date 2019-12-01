@@ -9,5 +9,8 @@ cmake CMakeLists.txt && make
 
 ## Usage
 
-Examples are in usage_example.cpp \n
-Compile: **cmake CMakeLists.txt && make**
+Examples are in usage_example.cpp
+
+## Compile test program
+
+**cmake CMakeLists.txt && make**
