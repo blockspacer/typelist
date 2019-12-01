@@ -5,3 +5,4 @@ Example of using in usage_example.cpp
 ## Getting Started
 
 cmake CMakeLists.txt && make
+./typelist
