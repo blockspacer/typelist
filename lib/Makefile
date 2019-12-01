@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amaxacla/programs/typelist/CMakeFiles /Users/amaxacla/programs/typelist/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/amaxacla/programs/typelist && $(CMAKE_COMMAND) -E cmake_progress_start /Users/amaxacla/programs/typelist/CMakeFiles /Users/amaxacla/programs/typelist/lib/CMakeFiles/progress.marks
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amaxacla/programs/typelist/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/amaxacla/programs/typelist && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named typelist
+# Convenience name for target.
+lib/CMakeFiles/typelist_lib.dir/rule:
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/typelist_lib.dir/rule
+.PHONY : lib/CMakeFiles/typelist_lib.dir/rule
 
-# Build rule for target.
-typelist: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 typelist
-.PHONY : typelist
+# Convenience name for target.
+typelist_lib: lib/CMakeFiles/typelist_lib.dir/rule
 
-# fast build rule for target.
-typelist/fast:
-	$(MAKE) -f CMakeFiles/typelist.dir/build.make CMakeFiles/typelist.dir/build
-.PHONY : typelist/fast
-
-#=============================================================================
-# Target rules for targets named typelist_lib
-
-# Build rule for target.
-typelist_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 typelist_lib
 .PHONY : typelist_lib
 
 # fast build rule for target.
 typelist_lib/fast:
-	$(MAKE) -f lib/CMakeFiles/typelist_lib.dir/build.make lib/CMakeFiles/typelist_lib.dir/build
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f lib/CMakeFiles/typelist_lib.dir/build.make lib/CMakeFiles/typelist_lib.dir/build
 .PHONY : typelist_lib/fast
 
-usage_example.o: usage_example.cpp.o
+dummy.o: dummy.cpp.o
 
-.PHONY : usage_example.o
+.PHONY : dummy.o
 
 # target to build an object file
-usage_example.cpp.o:
-	$(MAKE) -f CMakeFiles/typelist.dir/build.make CMakeFiles/typelist.dir/usage_example.cpp.o
-.PHONY : usage_example.cpp.o
+dummy.cpp.o:
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f lib/CMakeFiles/typelist_lib.dir/build.make lib/CMakeFiles/typelist_lib.dir/dummy.cpp.o
+.PHONY : dummy.cpp.o
 
-usage_example.i: usage_example.cpp.i
+dummy.i: dummy.cpp.i
 
-.PHONY : usage_example.i
+.PHONY : dummy.i
 
 # target to preprocess a source file
-usage_example.cpp.i:
-	$(MAKE) -f CMakeFiles/typelist.dir/build.make CMakeFiles/typelist.dir/usage_example.cpp.i
-.PHONY : usage_example.cpp.i
+dummy.cpp.i:
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f lib/CMakeFiles/typelist_lib.dir/build.make lib/CMakeFiles/typelist_lib.dir/dummy.cpp.i
+.PHONY : dummy.cpp.i
 
-usage_example.s: usage_example.cpp.s
+dummy.s: dummy.cpp.s
 
-.PHONY : usage_example.s
+.PHONY : dummy.s
 
 # target to generate assembly for a file
-usage_example.cpp.s:
-	$(MAKE) -f CMakeFiles/typelist.dir/build.make CMakeFiles/typelist.dir/usage_example.cpp.s
-.PHONY : usage_example.cpp.s
+dummy.cpp.s:
+	cd /Users/amaxacla/programs/typelist && $(MAKE) -f lib/CMakeFiles/typelist_lib.dir/build.make lib/CMakeFiles/typelist_lib.dir/dummy.cpp.s
+.PHONY : dummy.cpp.s
 
 # Help Target
 help:
@@ -171,11 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... typelist"
 	@echo "... typelist_lib"
-	@echo "... usage_example.o"
-	@echo "... usage_example.i"
-	@echo "... usage_example.s"
+	@echo "... dummy.o"
+	@echo "... dummy.i"
+	@echo "... dummy.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/amaxacla/programs/typelist && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

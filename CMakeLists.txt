@@ -1,14 +1,10 @@
-cmake_minimum_required(VERSION 3.15) 
-
-project(temp_shit)
-
+cmake_minimum_required(VERSION 3.0.0)
+project(typelist)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-stdlib=libc++ -std=c++17")
 
-set(SOURCE_EXE temp.cpp)
-#set(SOURCE_LIB typelist.hpp)
+add_executable(${PROJECT_NAME} usage_example.cpp)
 
-#add_library(inc STATIC ${SOURCE_LIB})
+add_subdirectory(lib)
 
-add_executable(temp ${SOURCE_EXE})
-
-#target_link_libraries(temp inc)
+set_target_properties(typelist_lib PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(${PROJECT_NAME} typelist_lib)

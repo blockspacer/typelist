@@ -1,3 +1,6 @@
 /Users/amaxacla/programs/typelist/CMakeFiles/rebuild_cache.dir
 /Users/amaxacla/programs/typelist/CMakeFiles/edit_cache.dir
-/Users/amaxacla/programs/typelist/CMakeFiles/temp.dir
+/Users/amaxacla/programs/typelist/CMakeFiles/typelist.dir
+/Users/amaxacla/programs/typelist/lib/CMakeFiles/rebuild_cache.dir
+/Users/amaxacla/programs/typelist/lib/CMakeFiles/edit_cache.dir
+/Users/amaxacla/programs/typelist/lib/CMakeFiles/typelist_lib.dir
