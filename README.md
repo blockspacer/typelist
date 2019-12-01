@@ -13,4 +13,4 @@ Examples are in usage_example.cpp
 
 ## Compile test program
 
-**cmake CMakeLists.txt && make**
+**cmake CMakeLists.txt && make && ./typelist**
